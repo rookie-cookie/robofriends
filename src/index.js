@@ -7,11 +7,11 @@ import './index.css';
 // import Card from './Card.js';
 import 'tachyons'
 import registerServiceWorker from './registerServiceWorker';
-import {robots} from './robots';
-import CardList from './CardList';
+// import {robots} from './robots';
+import App from './App';
 
 //create Card component
 ReactDOM.render(
-	<CardList robots={robots} />
+	<App />
 , document.getElementById('root'));
 registerServiceWorker();
