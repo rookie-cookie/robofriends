@@ -8,7 +8,7 @@ import './index.css';
 import 'tachyons'
 import registerServiceWorker from './registerServiceWorker';
 // import {robots} from './robots';
-import App from './App';
+import App from './containers/App';
 
 //create Card component
 ReactDOM.render(

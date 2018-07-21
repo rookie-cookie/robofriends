@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import CardList from './CardList';
-import SearchBox from './SearchBox';
+import CardList from '../components/CardList';
+import SearchBox from '../components/SearchBox';
 // import { robots } from './robots';
 import './app.css';
-import Scroll from './Scroll';
+import Scroll from '../components/Scroll';
 
 // STATE >> props
 // state - an object that describes your application, things that can change and affect the app
@@ -41,13 +41,11 @@ class App extends Component{
 
 
 	render () {
-		const { robots, searchfield } = this.state;
-
-		const filteredRobots = robots.filter(robot => {
-			return robot.name.toLowerCase().includes(searchfield.toLowerCase());
+		const filteredRobots = this.state.robots.filter(robots => {
+			return robots.name.toLowerCase().includes(this.state.searchfield.toLowerCase());
 		})
-		//if taking a long time to load, ex robots.length is still 0
-		if (!robots.length){
+
+		if (this.state.robots.length === 0){
 			return <h1>Loading...</h1>
 		} else {
 			return (
