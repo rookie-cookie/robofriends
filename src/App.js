@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import CardList from './CardList';
 import SearchBox from './SearchBox';
-import { robots } from './robots';
+// import { robots } from './robots';
 import './app.css';
 
 // STATE >> props
@@ -15,9 +15,22 @@ class App extends Component{
 		super()
 		//app state - it is what describes the app
 		this.state = {
-			robots: robots,
+			robots: [],
 			searchfield: ''
 		}
+	}
+
+	componentDidMount(){
+		//fake api call 
+		//request 
+		fetch('https://jsonplaceholder.typicode.com/users').then(response => {
+			//response
+			return response.json();
+		})
+		.then(users => {
+			//update using setState
+		 this.setState({robots: users});
+		})
 	}
 
 	onSearchchange = (event) => {
