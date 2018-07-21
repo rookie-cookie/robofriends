@@ -6,7 +6,7 @@ run npm install
 run npm start
 ```
 
-
+![alt text](https://github.com/rookie-cookie/robofriends/blob/master/screenshot.png)
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
