@@ -3,6 +3,7 @@ import CardList from './CardList';
 import SearchBox from './SearchBox';
 // import { robots } from './robots';
 import './app.css';
+import Scroll from './Scroll';
 
 // STATE >> props
 // state - an object that describes your application, things that can change and affect the app
@@ -51,7 +52,10 @@ class App extends Component{
 				<div className = 'tc'>
 					<h1 className='f1' >RoboFriends</h1>
 					<SearchBox searchChange={this.onSearchchange}/>
-					<CardList robots={filteredRobots} />
+					
+					<Scroll>
+							<CardList robots={filteredRobots} />
+					</Scroll>
 				</div>
 			)
 		}	

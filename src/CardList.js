@@ -8,7 +8,7 @@ return (
 		{
 			robots.map((user,i) => {
 			//in react, remember to add a key prop, this will allow react to know if a component is deleted
-			//react will keep track and therefore not have to rerun the entire dom is something changes
+			//react will keep track and therefore not have to rerun the entire dom if something changes
 			return (
 			 <Card 
 				 key={i} 
@@ -16,7 +16,7 @@ return (
 				 name={robots[i].name} 
 				 email={robots[i].email} 
 			 />
-	 	)
+	 		)
 			})
 	}
 	</div>
